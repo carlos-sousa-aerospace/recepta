@@ -1,0 +1,127 @@
+/* Adobe Fonts */
+
+
+/* latin-ext */
+
+@font-face {
+    font-family: 'proxima-nova';
+    font-style: normal;
+    font-weight: 400;
+    src: url(../fonts/pnnormal.woff2) format('woff2'), url(../fonts/pnnormal.woff) format('woff'), url(../fonts/pnnormal.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'proxima-nova-light';
+    font-style: normal;
+    font-weight: 300;
+    src: url(../fonts/pnlight.woff2) format('woff2'), url(../fonts/pnlight.woff) format('woff'), url(../fonts/pnlight.otf) format('opentype');
+}
+
+#contenedor {
+    font-family: "proxima-nova-light", "proxima-nova", sans-serif;
+    font-weight: 300;
+    width: 90vw;
+    margin: auto;
+}
+main {
+    margin: auto;
+    max-width: 640px;
+}
+
+.header {
+    text-align: center;
+}
+
+h1,h2,h3 {
+    font-family: "proxima-nova", sans-serif;
+    font-weight: 400;
+}
+
+h1 {
+    font-size: 24pt;
+    padding: 1.2em 0 0.5em 0;
+}
+
+h2 {
+    font-size: 20pt;
+    padding: 0.5em 0 0.8em 0;
+}
+
+h3 {
+    font-size: 16pt;
+    padding: 0 0 0.8em 0;
+}
+
+p,q {
+    font-size: 14pt;
+    line-height: 1.35;
+    margin-bottom: 10pt;
+}
+
+p {
+    text-align: justify;
+    text-justify: auto;
+}
+
+p.first-p {
+    text-indent: 1.25em;
+}
+
+q {
+    display: block;
+    text-align: center;
+    font-style: italic;
+    color: black;
+}
+
+.contenedor-background-button {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: start;
+    justify-content: space-between;
+    width: fit-content;
+    height: 100px;
+    margin: 30pt auto;
+}
+
+.bg-line {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-items: start;
+    align-items: center;
+}
+
+.bg-button {
+    margin: 0;
+    padding: 0;
+}
+
+.arrow {
+    height: 30px;
+}
+
+.button-label {
+    font-size: 14pt;
+}
+
+.contenedor-layer-model {
+    text-align: center;
+    margin: 30pt 0;
+}
+
+.layer-model {
+    height: 200px;
+}
+
+.svg-text {
+    font-size: 8px;
+}
+
+.contenedor-slider {
+    width: fit-content;
+    margin: 30pt auto;
+}
+
+.slider {
+    height: 45px;
+}

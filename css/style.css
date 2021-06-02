@@ -1,0 +1,361 @@
+/* Google API Fonts */
+
+
+/* latin */
+
+@font-face {
+    font-family: 'proxima-nova-gapi';
+    font-style: normal;
+    font-weight: 400;
+    src: url(../fonts/pnlatin.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+
+/* latin-ext */
+
+@font-face {
+    font-family: 'proxima-nova-gapi';
+    font-style: normal;
+    font-weight: 400;
+    src: url(../fonts/pnlatinext.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+
+/* Adobe Fonts */
+
+
+/* latin-ext */
+
+@font-face {
+    font-family: 'proxima-nova';
+    font-style: normal;
+    font-weight: 400;
+    src: url(../fonts/pnnormal.woff2) format('woff2'), url(../fonts/pnnormal.woff) format('woff'), url(../fonts/pnnormal.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'proxima-nova-light';
+    font-style: normal;
+    font-weight: 300;
+    src: url(../fonts/pnlight.woff2) format('woff2'), url(../fonts/pnlight.woff) format('woff'), url(../fonts/pnlight.otf) format('opentype');
+}
+
+#container {
+    width: 90vw;
+    height: calc((4304 / 2479) * 90vw);
+    margin: auto;
+    background-image: url("../img/original-image.jpg");
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-attachment: scroll;
+    font-display: swap;
+}
+
+main {
+    width: 71.55vw;
+    margin: auto;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+main:not(.section-title) {
+    font-family: "proxima-nova-light", "proxima-nova", "proxima-nova-gapi", sans-serif;
+    font-weight: 300;
+}
+
+main:not(.list) {
+    font-size: 2.118vw;
+}
+
+main>section {
+    display: flex;
+    flex-flow: column nowrap;
+    width: 100%;
+    justify-content: stretch;
+    /* main axis */
+    align-items: center;
+    /* cross-axis */
+}
+
+#top-header {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: calc((1458 / 2479) * 90vw);
+    justify-items: stretch;
+    align-items: stretch;
+    column-gap: 0;
+}
+
+#header-img-container {
+    width: 100%;
+    height: 100%;
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+    z-index: 1;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+#header-img {
+    transform-origin: center;
+    transform: scale(1.013) translateY(-8.7%);
+    /* Fine tuning the image*/
+}
+
+#top-header-title {
+    width: 100%;
+    height: auto;
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+    z-index: 5;
+    margin: 0;
+    padding-top: 19.80vw;
+    font-size: 7.25vw;
+    text-align: center;
+    color: white;
+}
+
+#switchBg-container {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-end;
+    width: auto;
+    height: auto;
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    z-index: 10;
+    text-align: center;
+}
+
+#about-button {
+    width: 30px;
+    height: 30px;
+    color: white;
+    border: 0.16em solid white;
+    border-radius: 15px;
+    margin: 0.3em 0 0.6em 0.3em;
+    font-size: normal;
+    font-weight: 400;
+    background-color: transparent;
+    transition: all 150ms ease;
+    animation-duration: 2s;
+    animation-name: bounceIn;
+}
+
+#switchBg {
+    width: 150px;
+    height: 30px;
+    color: darkgrey;
+    border: 0.16em solid darkgrey;
+    border-radius: 15px;
+    margin: 0.3em 0.3em 0.6em 0.3em;
+    padding: 0;
+    font-size: smaller;
+    font-weight: 400;
+    text-transform: uppercase;
+    background-color: transparent;
+    transition: all 150ms ease;
+}
+
+#about-button,
+#switchBg,
+#switchBg-container>label {
+    font-family: 'Roboto', sans-serif;
+}
+
+#about-button,
+#switchBg:hover,
+#switchBg:focus {
+    color: #DDDDDD;
+    border-color: #DDDDDD;
+    outline: none;
+}
+
+#about-button:active,
+#switchBg:active {
+    color: #BBBBBB;
+    border-color: #BBBBBB;
+}
+
+#about-button:active {
+    transform: scale(0.96);
+}
+
+#switchBg:active {
+    transform: scale(0.99);
+}
+
+#switchBg-container>label {
+    color: white;
+    text-transform: uppercase;
+    font-size: x-small;
+    padding: 4px;
+    margin-right: 4.5em;
+}
+
+#opacity-slider {
+    cursor: ew-resize;
+    -webkit-appearance: none;
+    background: transparent;
+    margin-right: 1em;
+}
+
+#opacity-slider:focus {
+    outline: none;
+}
+
+#opacity-slider::-ms-track {
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+    cursor: ew-resize;
+}
+
+#opacity-slider::-webkit-slider-runnable-track {
+    width: 100px;
+    height: 6px;
+    background: white;
+    border: none;
+    cursor: ew-resize;
+    opacity: 0.90;
+}
+
+#opacity-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: 1px solid black;
+    height: 12px;
+    width: 12px;
+    background: white;
+    cursor: ew-resize;
+    margin-top: -3px;
+    box-shadow: 1px 1px 1px black, 0px 0px 1px #0d0d0d;
+}
+
+
+/* For Firefox */
+
+#opacity-slider::-moz-range-thumb {
+    border: 1px solid black;
+    height: 12px;
+    width: 12px;
+    background: white;
+    cursor: ew-resize;
+    box-shadow: 1px 1px 1px black, 0px 0px 1px #0d0d0d;
+}
+
+
+/* For IE */
+
+input[type=range]::-ms-thumb {
+    border: 1px solid black;
+    height: 12px;
+    width: 12px;
+    background: white;
+    cursor: ew-resize;
+    box-shadow: 1px 1px 1px black, 0px 0px 1px #0d0d0d;
+}
+
+section.introduction {
+    padding-top: 6.7vw;
+    padding-bottom: 3.2vw;
+    transform: translateX(-0.3vw);
+}
+
+section.ingredients {
+    padding-top: 0;
+    padding-bottom: 3.2vw;
+}
+
+#top-header-title,
+.section-title {
+    font-family: "proxima-nova", "proxima-nova-gapi", sans-serif;
+    font-weight: 400;
+    text-transform: capitalize;
+}
+
+section.ingredients .section-title {
+    padding-top: 4.2vw;
+    padding-bottom: 2.35vw;
+}
+
+section.directions .section-title {
+    padding-top: 3.77vw;
+    padding-bottom: 3.48vw;
+}
+
+.article {
+    width: 100%;
+    padding-top: 0;
+    padding-bottom: 0.68vw;
+}
+
+header.icon-bar {
+    width: 100%;
+    padding-bottom: 1.62vw;
+    border-bottom: 2px solid darkgrey;
+    text-align: center;
+}
+
+#recipe-info {
+    width: 34.25vw;
+    opacity: 0.7;
+}
+
+#cooking-info {
+    width: 31vw;
+    opacity: 0.7;
+}
+
+.list {
+    list-style-position: inside;
+    font-size: 1.823vw;
+    padding-left: 1.10vw;
+}
+
+ul.list {
+    list-style-type: "- ";
+}
+
+ol.list {
+    list-style-type: none;
+    counter-reset: counter;
+}
+
+ul.list>li {
+    padding-bottom: 0.08vw;
+}
+
+ol.list>li {
+    padding-bottom: 0.09vw;
+    counter-increment: counter;
+}
+
+ol.list>li::before {
+    content: counter(counter) ") ";
+}
+
+@keyframes bounceIn {
+    0% {
+      transform: scale(0.1);
+      opacity: 0;
+    }
+    30% {
+        transform: scale(1.2);
+        opacity: 1;
+      }
+    60% {
+      transform: scale(0.8);
+    }
+    90% {
+        transform: scale(1.2);
+      }
+    100% {
+      transform: scale(1);
+    }
+  }

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/about.css">
+</head>
+
+<body>
+    <div id="contenedor">
+        <main>
+            <header class="header">
+                <h1>EVALUACIÓN CONTÍNUA UF1841</h1>
+                <h2>Actividad 1: Maquetación básica</h2>
+                <h3>Carlos Sousa</h3>
+            </header>
+            <section class="section-1">
+                <h1><strong>Modelo de Replicación con Capas</strong></h1>
+                <p class="first-p">
+                    Este ejercicio tiene como objetivo la práctica de las bases de HTML y CSS.
+                    El requisito principal es reproducir la imagen lo más exactamente posible a la que figura
+                    en el enunciado del problema, la cual también se puede consultar en el siguiente enlace:
+                </p>
+                <a href="https://i.imgur.com/lGGM68Q.jpg">
+                    <q>https://i.imgur.com/lGGM68Q.jpg</q>
+                </a>
+                <p>
+                    Para el desarrollo de la página se utilizaron propiedades clásicas de CSS como "margin" y "padding".
+                    Por lo tanto, se hizo evidente la necesidad de una herramienta que agilizara la comparación
+                    más fina entre la imagen original y la página que se pretendía desarrollar. Esto llevó a la creación
+                    del botón "<strong>Background</strong>" y su funcionalidad.
+                </p>
+                <div class="contenedor-background-button">
+                    <div class="bg-line">
+                        <img class="bg-button" src="img/background-button-on.png" alt="bottón background encendido">
+                        <svg class="arrow" viewbox="0 0 30 10">
+                            <defs>
+                            <!-- arrowhead marker definition -->
+                            <marker id="arrow-marker" viewBox="0 0 10 10" refX="5" refY="5"
+                                markerWidth="4" markerHeight="4"
+                                orient="auto-start-reverse">
+                                <path d="M 0 0 L 10 5 L 0 10 z" />
+                            </marker>
+                            <line id="arrow-to-left" x1="27" y1="5" x2="4" y2="5" stroke="black" marker-end="url(#arrow-marker)"/>
+                            <line id="arrow-to-right" x1="4" y1="5" x2="27" y2="5" stroke="black" marker-end="url(#arrow-marker)"/>
+                            </defs>
+                      
+                            <!-- Coordinate axes with a arrowhead in both direction -->
+                            <use href="#arrow-to-left"/>
+                        </svg>
+                        <span class="button-label">Botón Background encendido</span>
+                    </div>
+                    <div class="bg-line">
+                        <img class="bg-button" src="img/background-button-off.png" alt="bottón background apagado">
+                        <svg class="arrow" viewbox="0 0 30 10">
+                            <use href="#arrow-to-left"/>
+                        </svg>
+                        <span class="button-label">Botón Background apagado</span>
+                    </div>
+                </div>
+                <p>Cuando el botón "Background" se encontra encendido, como muestra la figura de arriba, la imagen objetivo
+                    del enunciado se muestra en el fondo de la página. De esta forma, se puede imaginar la página
+                    compuesta por dos capas: una capa inferior denominada "<strong>Background</strong>" con la imagen
+                    objetivo que se pretende replicar y una capa superior denominada "<strong>Foreground</strong>" con el
+                    contenido de la página obtenido con el ejercicio de replicación.
+                </p>
+                <div class="contenedor-layer-model">
+                    <svg class="layer-model" viewbox="0 0 180 80">
+                        <rect x="60" y="15" width="40" height="60" style="fill:white;stroke:black;"/>
+                        <rect x="80" y="5" width="40" height="60" style="fill:white;stroke:black;"/>
+                        <use href="#arrow-to-left" x="43" y="25"/>
+                        <use href="#arrow-to-right" x="106" y="25"/>
+                        <text class="svg-text" x="0" y="32">Background</text>
+                        <text class="svg-text" x="139" y="32">Foreground</text>
+                    </svg>
+                </div>
+                <p>
+                    Además de volverse visible la capa inferior, el botón "Background" al estar encendido también muestra un
+                    control deslizante de rango que permite variar la opacidad de la capa superior donde está el contenido
+                    de la página. Esta funcionalidad facilita la comparación de objetos que están sobrepuestos. En este caso,
+                    el objeto de la capa inferior está oculto por el objeto que está por delante en la capa superior, por lo
+                    cual resulta difícil su comparación.
+                </p>
+                <div class="contenedor-slider">
+                    <img class="slider" src="img/slider.png" alt="control deslizante de rango">
+                </div>
+            </section>
+            <section class="section-2">
+                <h1><strong>Selección de la Fuente</strong></h1>
+                <p class="first-p">
+                    La selección de la fuente usada en este ejercicio fue posible gracias a motores de búsqueda online
+                    de fuentes a través de imagens raster. También fue necesario un tratamiento de imagen para que la calidad
+                    de las letras fuese lo suficiente fina para que el motor de búsqueda hiciera una correcta interpretación.
+                    Por último, fue realizada una comparación por inspección manual de cada uno de los resultados hasta lograr
+                    identificar la fuente que es utilizada en la imagen objetivo del enunciado.
+                </p>
+                <p>
+                    La fuente más cercana identificada con este proceso fue la fuente "<strong>Proxima Nova</strong>" diseñada
+                    por Mark Simonson.
+                    A la fecha de realización de este ejercicio, esta fuente está disponible en Adobe Fonts y en el Google Fonts
+                    API. La fuente está repartida entre ficheros de formatos woff2, woff y otf que están en la carpeta "Fonts".
+                    Estos ficheros están vinculados al texto de la página a través de la instrucción CSS @font-face con un url
+                    local para la carpeta "Fonts".
+                </p>
+                <p>
+                    En este ejercicio no se ha tenido en cuenta criterios de usabilidad sobre tamaño mínimo de fuente.
+                </p>
+            </section>
+            <section class="section-3">
+                <h1><strong>Desvinculación del texto al HTML</strong></h1>
+                <p class="first-p">
+                    En lenguaje de marcación HTML el texto estático de una página de internet suele ser introducido directamente
+                    en etiquetas propias del lenguaje. La estructura lógica de la página obtenida y los elementos de texto suelen
+                    estar contenidos en el mismo entorno de programación y físicamente en el mismo fichero HTML. Sin embargo, en
+                    este ejercicio se hizo la separación del código HTML y el texto de la página. La principal ventaja es agilizar
+                    el cambio de texto, sin tener que buscarlo en la complejidad de etiquetas HTML que componen la estructura de la
+                    página.
+                </p>
+                <p>
+                    El texto que se tiene que introducir en la página está indicado en el problema y esta contenido en un fichero ASCII
+                    sin formato y con extensión "md". En este fichero el texto está dividido por las secciones correspondientes,
+                    donde cada sección está separada por una línea que se puede identificar por una doble almohadilla seguido por la
+                    descripción de la sección, por ejemplo:
+                </p>
+                <q>## Descripción receta</q>
+                <p>
+                    Con ayuda de Javascript, se creó una función para lectura de texto del fichero "md" y otra función para crear
+                    objetos HTML, para luego introducir éstos en el Modelo de Objetos del Documento (DOM) de la página. La
+                    función de lectura utiliza la función <strong>fetch</strong> para que sea posible una lectura asíncrona del
+                    texto. Posteriormente, cada línea de texto es procesada a la vez con llamadas a funciones de
+                    <strong>regex</strong> por forma para identificar los descriptores de las secciones. Tras identificar las secciones
+                    el texto es finalmente transladado a objetos HTML y añadido al DOM.
+                </p>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
